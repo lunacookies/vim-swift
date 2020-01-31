@@ -158,6 +158,12 @@ highlight link swiftWhere swiftKeyword
 syntax region swiftString start='"' end='"'
 
 "
+" User-defined types
+"
+
+syntax match swiftUserType "\v<[A-Z][A-Za-z0-9]*>"
+
+"
 " Standard library types
 "
 
@@ -168,10 +174,20 @@ for s:standardLibraryType in s:standardLibraryTypes
 endfor
 
 "
-" User-defined types
+" User-defined functions
 "
 
-syntax match swiftUserType "\v<[A-Z][A-Za-z0-9]*>"
+syntax match swiftUserFunc '\v<[a-z][A-Za-z0-9]*(\()@='
+
+"
+" Standard library functions
+"
+
+let s:standardLibraryFuncs = ["abs", "addProduct", "addingProduct", "addingReportingOverflow", "advanced", "alignment", "all", "allSatisfy", "allocate", "any", "append", "appendInterpolation", "appendLiteral", "appending", "applying", "assert", "assertionFailure", "assign", "assumingMemoryBound", "autorelease", "bindMemory", "clamp", "clamped", "combine", "compactMap", "compactMapValues", "contains", "copyBytes", "copyMemory", "dataCorruptedError", "deallocate", "debugPrint", "decode", "decodeCString", "decodeIfPresent", "decodeNil", "deinitialize", "descendant", "difference", "distance", "dividedReportingOverflow", "dividingFullWidth", "drop", "dropFirst", "dropLast", "dump", "elementsEqual", "encode", "encodeConditional", "encodeIfPresent", "encodeNil", "enumerated", "escaped", "fatalError", "filter", "finalize", "first", "firstIndex", "flatMap", "flatMapError", "forEach", "formIndex", "formIntersection", "formRemainder", "formSquareRoot", "formSymmetricDifference", "formTruncatingRemainder", "formUnion", "fromOpaque", "get", "getVaList", "hasPrefix", "hasSuffix", "hash", "index", "inferringMoves", "initialize", "initializeMemory", "insert", "intersection", "inverse", "isASCII", "isContinuation", "isDisjoint", "isEqual", "isKnownUniquelyReferenced", "isLeadSurrogate", "isLess", "isLessThanOrEqualTo", "isMultiple", "isStrictSubset", "isStrictSuperset", "isSubset", "isSuperset", "isSurrogate", "isTotallyOrdered", "isTrailSurrogate", "isUniqueReference", "joined", "last", "lastIndex", "leadSurrogate", "lexicographicallyPrecedes", "load", "lowercased", "makeContiguousUTF8", "makeIterator", "map", "mapError", "mapValues", "max", "maximum", "maximumMagnitude", "merge", "merging", "min", "minimum", "minimumMagnitude", "move", "moveAssign", "moveInitialize", "moveInitializeMemory", "multipliedFullWidth", "multipliedReportingOverflow", "negate", "nestedContainer", "nestedUnkeyedContainer", "next", "numericCast", "offset", "overlaps", "parseScalar", "partition", "passRetained", "passUnretained", "pointwiseMax", "pointwiseMin", "popFirst", "popLast", "precondition", "preconditionFailure", "prefix", "print", "quotientAndRemainder", "random", "randomElement", "readLine", "reduce", "relative", "release", "remainder", "remainderReportingOverflow", "remove", "removeAll", "removeFirst", "removeLast", "removeSubrange", "removeValue", "repeatElement", "replace", "replaceSubrange", "replacing", "reserveCapacity", "retain", "reverse", "reversed", "round", "rounded", "samePosition", "sequence", "shuffle", "shuffled", "signum", "size", "sort", "sorted", "split", "squareRoot", "starts", "storeBytes", "stride", "subtract", "subtracting", "subtractingReportingOverflow", "suffix", "sum", "superDecoder", "superEncoder", "swap", "swapAt", "symmetricDifference", "takeRetainedValue", "takeUnretainedValue", "toOpaque", "toggle", "trailSurrogate", "transcode", "transcodedLength", "truncatingRemainder", "type", "union", "unsafeBitCast", "unsafeDowncast", "update", "updateValue", "uppercased", "utf16Offset", "width", "withCString", "withContiguousMutableStorageIfAvailable", "withContiguousStorageIfAvailable", "withExtendedLifetime", "withMemoryRebound", "withUTF8", "withUTF8Buffer", "withUnsafeBufferPointer", "withUnsafeBytes", "withUnsafeMutableBufferPointer", "withUnsafeMutableBytes", "withUnsafeMutablePointer", "withUnsafeMutablePointerToElements", "withUnsafeMutablePointerToHeader", "withUnsafeMutablePointers", "withUnsafePointer", "withVaList", "withoutActuallyEscaping", "wrappedSum", "write", "zip"]
+
+for s:standardLibraryFunc in s:standardLibraryFuncs
+    execute 'syntax match swiftLibraryFunc "\v<' . s:standardLibraryFunc . '(\()@="'
+endfor
 
 "
 " Default Linkages
@@ -183,8 +199,10 @@ highlight link swiftException Exception
 highlight link swiftInclude Include
 highlight link swiftKeyword Keyword
 highlight link swiftLabel Label
+highlight link swiftLibraryFunc Function
 highlight link swiftLibraryType Type
 highlight link swiftRepeat Repeat
 highlight link swiftStorageClass StorageClass
 highlight link swiftString String
+highlight link swiftUserFunc Function
 highlight link swiftUserType Type
