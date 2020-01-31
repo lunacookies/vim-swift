@@ -152,6 +152,12 @@ highlight link swiftVar swiftKeyword
 highlight link swiftWhere swiftKeyword
 
 "
+" Strings
+"
+
+syntax region swiftString start='"' end='"'
+
+"
 " Default Linkages
 "
 
@@ -163,3 +169,4 @@ highlight link swiftKeyword Keyword
 highlight link swiftLabel Label
 highlight link swiftRepeat Repeat
 highlight link swiftStorageClass StorageClass
+highlight link swiftString String
