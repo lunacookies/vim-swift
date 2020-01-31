@@ -94,31 +94,31 @@ highlight link swiftStatic swiftStorageClass
 syntax keyword swiftAs as
 syntax keyword swiftAssociatedType associatedtype
 syntax keyword swiftBreak break
-syntax keyword swiftClass class
+syntax keyword swiftClass class nextgroup=swiftTypeDef skipwhite skipempty
 syntax keyword swiftContinue continue
 syntax keyword swiftDefer defer
 syntax keyword swiftDeinit deinit
 syntax keyword swiftDo do
-syntax keyword swiftEnum enum
+syntax keyword swiftEnum enum nextgroup=swiftTypeDef skipwhite skipempty
 syntax keyword swiftExtension extension
 syntax keyword swiftFallthrough fallthrough
-syntax keyword swiftFunc func
+syntax keyword swiftFunc func nextgroup=swiftFuncDef skipwhite skipempty
 syntax keyword swiftGuard guard
 syntax keyword swiftIn in
 syntax keyword swiftInit init
 syntax keyword swiftIs is
-syntax keyword swiftLet let
+syntax keyword swiftLet let nextgroup=swiftIdentDef skipwhite skipempty
 syntax keyword swiftNil nil
 syntax keyword swiftOperator operator
 syntax keyword swiftProtocol protocol
 syntax keyword swiftReturn return
 syntax keyword swiftSelf self
-syntax keyword swiftStruct struct
+syntax keyword swiftStruct struct nextgroup=swiftTypeDef skipwhite skipempty
 syntax keyword swiftSubscript subscript
 syntax keyword swiftSuper super
-syntax keyword swiftTypealias typealias
+syntax keyword swiftTypealias typealias nextgroup=swiftTypeDef skipwhite skipempty
 syntax keyword swiftUnderscore _
-syntax keyword swiftVar var
+syntax keyword swiftVar var nextgroup=swiftIdentDef skipwhite skipempty
 syntax keyword swiftWhere where
 
 highlight link swiftAs swiftKeyword
@@ -206,12 +206,32 @@ for s:standardLibraryFunc in s:standardLibraryFuncs
 endfor
 
 "
+" Type definitions
+"
+
+syntax match swiftTypeDef '\v<[A-Z][A-Za-z0-9]*' contained display
+
+"
+" Identifier definitions
+"
+
+syntax match swiftIdentDef '\v<[a-z][A-Za-z0-9]*' contained display
+
+"
+" Function definitions
+"
+
+syntax match swiftFuncDef '\v<[a-z][A-Za-z0-9]*(\()@=' contained display
+
+"
 " Default Linkages
 "
 
 highlight link swiftAccessLevel swiftKeyword
 highlight link swiftConditional Conditional
 highlight link swiftException Exception
+highlight link swiftFuncDef Function
+highlight link swiftIdentDef Identifier
 highlight link swiftInclude Include
 highlight link swiftKeyword Keyword
 highlight link swiftLabel Label
@@ -221,6 +241,7 @@ highlight link swiftLibraryType Type
 highlight link swiftRepeat Repeat
 highlight link swiftStorageClass StorageClass
 highlight link swiftString String
+highlight link swiftTypeDef Typedef
 highlight link swiftUserFunc Function
 highlight link swiftUserProp Identifier
 highlight link swiftUserType Type
