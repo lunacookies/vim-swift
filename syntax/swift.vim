@@ -174,6 +174,22 @@ for s:standardLibraryType in s:standardLibraryTypes
 endfor
 
 "
+" User-defined properties
+"
+
+syntax match swiftUserProp '\v(\.)@<=[a-z][A-Za-z0-9]*'
+
+"
+" Standard library properties
+"
+
+let s:standardLibraryProps = ["above", "aboveLeft", "aboveRight", "age", "alignment", "allKeys", "argc", "arguments", "asciiValue", "attachedAbove", "attachedAboveRight", "attachedBelow", "attachedBelowLeft", "base", "baseAddress", "below", "belowLeft", "belowRight", "bigEndian", "binade", "bitPattern", "bitWidth", "buffer", "byteSwapped", "canonicalCombiningClass", "capacity", "changesWhenCaseFolded", "changesWhenCaseMapped", "changesWhenLowercased", "changesWhenNFKCCaseFolded", "changesWhenTitlecased", "changesWhenUppercased", "children", "codingPath", "count", "customMirror", "customPlaygroundQuickLook", "debugDescription", "description", "displayStyle", "doubleAbove", "doubleBelow", "elements", "encodedOffset", "encodedReplacementCharacter", "endIndex", "evenHalf", "exponent", "exponentBitCount", "exponentBitPattern", "final capacity", "final hashValue", "final header", "first", "floatingPointClass", "generalCategory", "greatestFiniteMagnitude", "hasPointerRepresentation", "hashValue", "header", "hexDigitValue", "highHalf", "id", "indices", "infinity", "insertions", "iotaSubscript", "isASCII", "isASCIIHexDigit", "isAlphabetic", "isBidiControl", "isBidiMirrored", "isCanonical", "isCaseIgnorable", "isCased", "isContiguousUTF8", "isCurrencySymbol", "isDash", "isDefaultIgnorableCodePoint", "isDeprecated", "isDiacritic", "isEmoji", "isEmojiModifier", "isEmojiModifierBase", "isEmojiPresentation", "isEmpty", "isExtender", "isFinite", "isFullCompositionExclusion", "isGraphemeBase", "isGraphemeExtend", "isHexDigit", "isIDContinue", "isIDSBinaryOperator", "isIDSTrinaryOperator", "isIDStart", "isIdeographic", "isInfinite", "isJoinControl", "isLetter", "isLogicalOrderException", "isLowercase", "isMath", "isMathSymbol", "isNaN", "isNewline", "isNoncharacterCodePoint", "isNormal", "isNumber", "isPatternSyntax", "isPatternWhitespace", "isPunctuation", "isQuotationMark", "isRadical", "isSentenceTerminal", "isSignalingNaN", "isSigned", "isSoftDotted", "isSubnormal", "isSymbol", "isTerminalPunctuation", "isUnifiedIdeograph", "isUppercase", "isVariationSelector", "isWhitespace", "isWholeNumber", "isXIDContinue", "isXIDStart", "isZero", "kanaVoicing", "keys", "last", "lazy", "leadingZeroBitCount", "leastNonzeroMagnitude", "leastNormalMagnitude", "left", "littleEndian", "lowHalf", "lowerBound", "lowercaseMapping", "magnitude", "max", "min", "name", "nameAlias", "nan", "nextDown", "nextUp", "nonzeroBitCount", "notReordered", "nukta", "numericType", "numericValue", "oddHalf", "one", "overlay", "pi", "pointee", "properties", "radix", "rawValue", "removals", "repeatedValue", "right", "rootType", "scalarCount", "sign", "signalingNaN", "significand", "significandBitCount", "significandBitPattern", "significandWidth", "size", "startIndex", "stride", "subjectType", "superclassMirror", "titlecaseMapping", "trailingZeroBitCount", "ulp", "ulpOfOne", "underestimatedCount", "underlyingError", "unicodeScalar", "unicodeScalars", "unsafeArgv", "unsafelyUnwrapped", "upperBound", "uppercaseMapping", "utf16", "utf8", "utf8CString", "utf8CodeUnitCount", "utf8Start", "value", "valueType", "values", "virama", "w", "wholeNumberValue", "words", "x", "y", "z", "zero"]
+
+for s:standardLibraryProp in s:standardLibraryProps
+    execute 'syntax match swiftLibraryProp "\v(\.)@<=' . s:standardLibraryProp . '>"'
+endfor
+
+"
 " User-defined functions
 "
 
@@ -200,9 +216,11 @@ highlight link swiftInclude Include
 highlight link swiftKeyword Keyword
 highlight link swiftLabel Label
 highlight link swiftLibraryFunc Function
+highlight link swiftLibraryProp Identifier
 highlight link swiftLibraryType Type
 highlight link swiftRepeat Repeat
 highlight link swiftStorageClass StorageClass
 highlight link swiftString String
 highlight link swiftUserFunc Function
+highlight link swiftUserProp Identifier
 highlight link swiftUserType Type
