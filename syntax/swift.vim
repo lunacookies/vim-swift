@@ -224,11 +224,24 @@ syntax match swiftIdentDef '\v<[a-z][A-Za-z0-9]*' contained display
 syntax match swiftFuncDef '\v<[a-z][A-Za-z0-9]*(\()@=' contained display
 
 "
+" Punctuation
+"
+
+syntax match swiftPunctuation '[!%&*+-./:<=>?^|~]\+'
+
+"
+" Delimiters
+"
+
+syntax match swiftDelimiter '[(){}\[\]]\+'
+
+"
 " Default Linkages
 "
 
 highlight link swiftAccessLevel swiftKeyword
 highlight link swiftConditional Conditional
+highlight link swiftDelimiter Delimiter
 highlight link swiftException Exception
 highlight link swiftFuncDef Function
 highlight link swiftIdentDef Identifier
@@ -238,6 +251,7 @@ highlight link swiftLabel Label
 highlight link swiftLibraryFunc Function
 highlight link swiftLibraryProp Identifier
 highlight link swiftLibraryType Type
+highlight link swiftPunctuation Operator
 highlight link swiftRepeat Repeat
 highlight link swiftStorageClass StorageClass
 highlight link swiftString String
