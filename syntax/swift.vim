@@ -168,6 +168,12 @@ for s:standardLibraryType in s:standardLibraryTypes
 endfor
 
 "
+" User-defined types
+"
+
+syntax match swiftUserType "\v<[A-Z][A-Za-z0-9]*>"
+
+"
 " Default Linkages
 "
 
@@ -181,3 +187,4 @@ highlight link swiftLibraryType Type
 highlight link swiftRepeat Repeat
 highlight link swiftStorageClass StorageClass
 highlight link swiftString String
+highlight link swiftUserType Type
