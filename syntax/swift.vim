@@ -112,7 +112,8 @@ syntax keyword swiftNil nil
 syntax keyword swiftOperator operator
 syntax keyword swiftProtocol protocol
 syntax keyword swiftReturn return
-syntax keyword swiftSelf self
+syntax keyword swiftSelfValue self
+syntax keyword swiftSelfType Self
 syntax keyword swiftStruct struct nextgroup=swiftTypeDef skipwhite skipempty
 syntax keyword swiftSubscript subscript
 syntax keyword swiftSuper super
@@ -142,7 +143,8 @@ highlight link swiftNil swiftKeyword
 highlight link swiftOperator swiftKeyword
 highlight link swiftProtocol swiftKeyword
 highlight link swiftReturn swiftKeyword
-highlight link swiftSelf swiftKeyword
+highlight link swiftSelfValue swiftKeyword
+highlight link swiftSelfType swiftKeyword
 highlight link swiftStruct swiftKeyword
 highlight link swiftSubscript swiftKeyword
 highlight link swiftSuper swiftKeyword
