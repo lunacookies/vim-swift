@@ -262,10 +262,21 @@ syntax match swiftNumber '\v[0-9_]+'
 syntax match swiftFloat '\v[0-9_]+\.[0-9_]+'
 
 "
+" Booleans
+"
+
+syntax keyword swiftFalse false
+syntax keyword swiftTrue true
+
+highlight link swiftFalse swiftBoolean
+highlight link swiftTrue swiftBoolean
+
+"
 " Default Linkages
 "
 
 highlight link swiftAccessLevel swiftKeyword
+highlight link swiftBoolean Boolean
 highlight link swiftComment Comment
 highlight link swiftCommentNote Todo
 highlight link swiftConditional Conditional
