@@ -236,12 +236,24 @@ syntax match swiftPunctuation '[!%&*+-./:<=>?^|~]\+'
 syntax match swiftDelimiter '[(){}\[\]]\+'
 
 "
+" Comments
+"
+
+syntax region swiftComment start='//' end='$'
+syntax region swiftDocComment start='///' end='$'
+
+syntax match swiftCommentNote '\v[A-Z]+(:)@=' containedin=swiftComment,swiftDocComment
+
+"
 " Default Linkages
 "
 
 highlight link swiftAccessLevel swiftKeyword
+highlight link swiftComment Comment
+highlight link swiftCommentNote Todo
 highlight link swiftConditional Conditional
 highlight link swiftDelimiter Delimiter
+highlight link swiftDocComment SpecialComment
 highlight link swiftException Exception
 highlight link swiftFuncDef Function
 highlight link swiftIdentDef Identifier
