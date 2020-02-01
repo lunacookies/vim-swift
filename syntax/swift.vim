@@ -158,6 +158,13 @@ highlight link swiftWhere swiftKeyword
 syntax region swiftString start='"' skip='\\"' end='"'
 syntax region swiftMultilineString start='"""' end='"""'
 
+syntax region swiftStringInterpolation
+            \ start='\\('
+            \ end=')'
+            \ containedin=swiftString
+            " swiftDelimiter matches parens, stopping the group from closing
+            \ contains=TOP,swiftDelimiter
+
 highlight link swiftMultilineString swiftString
 
 "
