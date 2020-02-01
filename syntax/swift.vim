@@ -255,6 +255,13 @@ syntax region swiftDocComment start='///' end='$'
 syntax match swiftCommentNote '\v[A-Z]+(:)@=' containedin=swiftComment,swiftDocComment
 
 "
+" Numbers
+"
+
+syntax match swiftNumber '\v[0-9_]+'
+syntax match swiftFloat '\v[0-9_]+\.[0-9_]+'
+
+"
 " Default Linkages
 "
 
@@ -265,6 +272,7 @@ highlight link swiftConditional Conditional
 highlight link swiftDelimiter Delimiter
 highlight link swiftDocComment SpecialComment
 highlight link swiftException Exception
+highlight link swiftFloat Float
 highlight link swiftFuncDef Function
 highlight link swiftIdentDef Identifier
 highlight link swiftInclude Include
@@ -273,6 +281,7 @@ highlight link swiftLabel Label
 highlight link swiftLibraryFunc Function
 highlight link swiftLibraryProp Identifier
 highlight link swiftLibraryType Type
+highlight link swiftNumber Number
 highlight link swiftPunctuation Operator
 highlight link swiftRepeat Repeat
 highlight link swiftStorageClass StorageClass
