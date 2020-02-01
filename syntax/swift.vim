@@ -155,7 +155,10 @@ highlight link swiftWhere swiftKeyword
 " Strings
 "
 
-syntax region swiftString start='"' end='"'
+syntax region swiftString start='"' skip='\\"' end='"'
+syntax region swiftMultilineString start='"""' end='"""'
+
+highlight link swiftMultilineString swiftString
 
 "
 " User-defined types
