@@ -108,12 +108,13 @@ syntax keyword swiftIn in
 syntax keyword swiftInit init
 syntax keyword swiftIs is
 syntax keyword swiftLet let nextgroup=swiftIdentDef skipwhite skipempty
+syntax keyword swiftMutating mutating
 syntax keyword swiftNil nil
 syntax keyword swiftOperator operator
 syntax keyword swiftProtocol protocol
 syntax keyword swiftReturn return
-syntax keyword swiftSelfValue self
 syntax keyword swiftSelfType Self
+syntax keyword swiftSelfValue self
 syntax keyword swiftStruct struct nextgroup=swiftTypeDef skipwhite skipempty
 syntax keyword swiftSubscript subscript
 syntax keyword swiftSuper super
@@ -139,12 +140,13 @@ highlight link swiftIn swiftKeyword
 highlight link swiftInit swiftKeyword
 highlight link swiftIs swiftKeyword
 highlight link swiftLet swiftKeyword
+highlight link swiftMutating swiftKeyword
 highlight link swiftNil swiftKeyword
 highlight link swiftOperator swiftKeyword
 highlight link swiftProtocol swiftKeyword
 highlight link swiftReturn swiftKeyword
-highlight link swiftSelfValue swiftKeyword
 highlight link swiftSelfType swiftKeyword
+highlight link swiftSelfValue swiftKeyword
 highlight link swiftStruct swiftKeyword
 highlight link swiftSubscript swiftKeyword
 highlight link swiftSuper swiftKeyword
