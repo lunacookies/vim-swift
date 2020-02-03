@@ -12,9 +12,9 @@ syntax keyword swiftElse else
 syntax keyword swiftIf if
 syntax keyword swiftSwitch switch
 
-highlight link swiftElse swiftConditional
-highlight link swiftIf swiftConditional
-highlight link swiftSwitch swiftConditional
+highlight default link swiftElse swiftConditional
+highlight default link swiftIf swiftConditional
+highlight default link swiftSwitch swiftConditional
 
 "
 " Repeats
@@ -24,9 +24,9 @@ syntax keyword swiftFor for
 syntax keyword swiftRepeat repeat
 syntax keyword swiftWhile while
 
-highlight link swiftFor swiftRepeat
-highlight link swiftRepeat swiftRepeat
-highlight link swiftWhile swiftRepeat
+highlight default link swiftFor swiftRepeat
+highlight default link swiftRepeat swiftRepeat
+highlight default link swiftWhile swiftRepeat
 
 "
 " Labels
@@ -35,8 +35,8 @@ highlight link swiftWhile swiftRepeat
 syntax keyword swiftCase case
 syntax keyword swiftDefault default
 
-highlight link swiftCase swiftLabel
-highlight link swiftDefault swiftLabel
+highlight default link swiftCase swiftLabel
+highlight default link swiftDefault swiftLabel
 
 "
 " Exceptions
@@ -48,18 +48,18 @@ syntax keyword swiftThrow throw
 syntax keyword swiftThrows throws
 syntax keyword swiftTry try
 
-highlight link swiftCatch swiftException
-highlight link swiftRethrows swiftException
-highlight link swiftThrow swiftException
-highlight link swiftThrows swiftException
-highlight link swiftTry swiftException
+highlight default link swiftCatch swiftException
+highlight default link swiftRethrows swiftException
+highlight default link swiftThrow swiftException
+highlight default link swiftThrows swiftException
+highlight default link swiftTry swiftException
 
 "
 " Includes
 "
 
 syntax keyword swiftImport import
-highlight link swiftImport swiftInclude
+highlight default link swiftImport swiftInclude
 
 "
 " Access levels
@@ -71,11 +71,11 @@ syntax keyword swiftOpen open
 syntax keyword swiftPrivate private
 syntax keyword swiftPublic public
 
-highlight link swiftFilePrivate swiftAccessLevel
-highlight link swiftInternal swiftAccessLevel
-highlight link swiftOpen swiftAccessLevel
-highlight link swiftPrivate swiftAccessLevel
-highlight link swiftPublic swiftAccessLevel
+highlight default link swiftFilePrivate swiftAccessLevel
+highlight default link swiftInternal swiftAccessLevel
+highlight default link swiftOpen swiftAccessLevel
+highlight default link swiftPrivate swiftAccessLevel
+highlight default link swiftPublic swiftAccessLevel
 
 "
 " Storage classes
@@ -84,8 +84,8 @@ highlight link swiftPublic swiftAccessLevel
 syntax keyword swiftInOut inout
 syntax keyword swiftStatic static
 
-highlight link swiftInOut swiftStorageClass
-highlight link swiftStatic swiftStorageClass
+highlight default link swiftInOut swiftStorageClass
+highlight default link swiftStatic swiftStorageClass
 
 "
 " Other keywords
@@ -123,37 +123,37 @@ syntax keyword swiftUnderscore _
 syntax keyword swiftVar var nextgroup=swiftIdentDef skipwhite skipempty
 syntax keyword swiftWhere where
 
-highlight link swiftAs swiftKeyword
-highlight link swiftAssociatedType swiftKeyword
-highlight link swiftBreak swiftKeyword
-highlight link swiftClass swiftKeyword
-highlight link swiftContinue swiftKeyword
-highlight link swiftDefer swiftKeyword
-highlight link swiftDeinit swiftKeyword
-highlight link swiftDo swiftKeyword
-highlight link swiftEnum swiftKeyword
-highlight link swiftExtension swiftKeyword
-highlight link swiftFallthrough swiftKeyword
-highlight link swiftFunc swiftKeyword
-highlight link swiftGuard swiftKeyword
-highlight link swiftIn swiftKeyword
-highlight link swiftInit swiftKeyword
-highlight link swiftIs swiftKeyword
-highlight link swiftLet swiftKeyword
-highlight link swiftMutating swiftKeyword
-highlight link swiftNil swiftKeyword
-highlight link swiftOperator swiftKeyword
-highlight link swiftProtocol swiftKeyword
-highlight link swiftReturn swiftKeyword
-highlight link swiftSelfType swiftKeyword
-highlight link swiftSelfValue swiftKeyword
-highlight link swiftStruct swiftKeyword
-highlight link swiftSubscript swiftKeyword
-highlight link swiftSuper swiftKeyword
-highlight link swiftTypealias swiftKeyword
-highlight link swiftUnderscore swiftKeyword
-highlight link swiftVar swiftKeyword
-highlight link swiftWhere swiftKeyword
+highlight default link swiftAs swiftKeyword
+highlight default link swiftAssociatedType swiftKeyword
+highlight default link swiftBreak swiftKeyword
+highlight default link swiftClass swiftKeyword
+highlight default link swiftContinue swiftKeyword
+highlight default link swiftDefer swiftKeyword
+highlight default link swiftDeinit swiftKeyword
+highlight default link swiftDo swiftKeyword
+highlight default link swiftEnum swiftKeyword
+highlight default link swiftExtension swiftKeyword
+highlight default link swiftFallthrough swiftKeyword
+highlight default link swiftFunc swiftKeyword
+highlight default link swiftGuard swiftKeyword
+highlight default link swiftIn swiftKeyword
+highlight default link swiftInit swiftKeyword
+highlight default link swiftIs swiftKeyword
+highlight default link swiftLet swiftKeyword
+highlight default link swiftMutating swiftKeyword
+highlight default link swiftNil swiftKeyword
+highlight default link swiftOperator swiftKeyword
+highlight default link swiftProtocol swiftKeyword
+highlight default link swiftReturn swiftKeyword
+highlight default link swiftSelfType swiftKeyword
+highlight default link swiftSelfValue swiftKeyword
+highlight default link swiftStruct swiftKeyword
+highlight default link swiftSubscript swiftKeyword
+highlight default link swiftSuper swiftKeyword
+highlight default link swiftTypealias swiftKeyword
+highlight default link swiftUnderscore swiftKeyword
+highlight default link swiftVar swiftKeyword
+highlight default link swiftWhere swiftKeyword
 
 "
 " Strings
@@ -169,7 +169,7 @@ syntax region swiftStringInterpolation
             " swiftDelimiter matches parens, stopping the group from closing
             \ contains=TOP,swiftDelimiter
 
-highlight link swiftMultilineString swiftString
+highlight default link swiftMultilineString swiftString
 
 "
 " User-defined types
@@ -275,36 +275,36 @@ syntax match swiftFloat '\v[0-9_]+\.[0-9_]+'
 syntax keyword swiftFalse false
 syntax keyword swiftTrue true
 
-highlight link swiftFalse swiftBoolean
-highlight link swiftTrue swiftBoolean
+highlight default link swiftFalse swiftBoolean
+highlight default link swiftTrue swiftBoolean
 
 "
 " Default Linkages
 "
 
-highlight link swiftAccessLevel swiftKeyword
-highlight link swiftBoolean Boolean
-highlight link swiftComment Comment
-highlight link swiftCommentNote Todo
-highlight link swiftConditional Conditional
-highlight link swiftDelimiter Delimiter
-highlight link swiftDocComment SpecialComment
-highlight link swiftException Exception
-highlight link swiftFloat Float
-highlight link swiftFuncDef Function
-highlight link swiftIdentDef Identifier
-highlight link swiftInclude Include
-highlight link swiftKeyword Keyword
-highlight link swiftLabel Label
-highlight link swiftLibraryFunc Function
-highlight link swiftLibraryProp Identifier
-highlight link swiftLibraryType Type
-highlight link swiftNumber Number
-highlight link swiftPunctuation Operator
-highlight link swiftRepeat Repeat
-highlight link swiftStorageClass StorageClass
-highlight link swiftString String
-highlight link swiftTypeDef Typedef
-highlight link swiftUserFunc Function
-highlight link swiftUserProp Identifier
-highlight link swiftUserType Type
+highlight default link swiftAccessLevel swiftKeyword
+highlight default link swiftBoolean Boolean
+highlight default link swiftComment Comment
+highlight default link swiftCommentNote Todo
+highlight default link swiftConditional Conditional
+highlight default link swiftDelimiter Delimiter
+highlight default link swiftDocComment SpecialComment
+highlight default link swiftException Exception
+highlight default link swiftFloat Float
+highlight default link swiftFuncDef Function
+highlight default link swiftIdentDef Identifier
+highlight default link swiftInclude Include
+highlight default link swiftKeyword Keyword
+highlight default link swiftLabel Label
+highlight default link swiftLibraryFunc Function
+highlight default link swiftLibraryProp Identifier
+highlight default link swiftLibraryType Type
+highlight default link swiftNumber Number
+highlight default link swiftPunctuation Operator
+highlight default link swiftRepeat Repeat
+highlight default link swiftStorageClass StorageClass
+highlight default link swiftString String
+highlight default link swiftTypeDef Typedef
+highlight default link swiftUserFunc Function
+highlight default link swiftUserProp Identifier
+highlight default link swiftUserType Type
