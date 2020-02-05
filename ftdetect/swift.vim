@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.swift setfiletype swift
+autocmd BufNewFile,BufRead *.swift,*.sil setfiletype swift
