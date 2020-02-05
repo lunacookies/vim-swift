@@ -2,6 +2,10 @@ if exists("b:current_syntax")
     finish
 endif
 
+if !exists("g:swiftHighlightIdents")
+    let g:swiftHighlightIdents = 0
+endif
+
 let b:current_syntax = "swift"
 
 "
@@ -172,6 +176,14 @@ syntax region swiftStringInterpolation
 highlight default link swiftMultilineString swiftString
 
 "
+" User Identifiers
+"
+
+if g:swiftHighlightIdents
+    syntax match swiftUserIdent '\v<[a-z][A-Za-z0-9]*>'
+endif
+
+"
 " User-defined types
 "
 
@@ -308,3 +320,7 @@ highlight default link swiftTypeDef Typedef
 highlight default link swiftUserFunc Function
 highlight default link swiftUserProp Identifier
 highlight default link swiftUserType Type
+
+if g:swiftHighlightIdents
+    highlight default link swiftUserIdent Identifier
+endif
