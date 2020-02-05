@@ -163,7 +163,7 @@ highlight default link swiftWhere swiftKeyword
 " Strings
 "
 
-syntax region swiftString start='"' skip='\\"' end='"'
+syntax region swiftString start='"' skip='\\\\\|\\"' end='"'
 syntax region swiftMultilineString start='"""' end='"""'
 
 syntax region swiftStringInterpolation
