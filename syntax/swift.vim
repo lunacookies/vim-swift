@@ -277,8 +277,8 @@ syntax match swiftCommentNote '\v[A-Z]+(:)@=' containedin=swiftComment,swiftDocC
 " Numbers
 "
 
-syntax match swiftNumber '\v[0-9_]+'
-syntax match swiftFloat '\v[0-9_]+\.[0-9_]+'
+syntax match swiftNumber '\v<[0-9_]+>'
+syntax match swiftFloat '\v<[0-9_]+\.[0-9_]+>'
 
 "
 " Booleans
