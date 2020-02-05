@@ -28,9 +28,9 @@ syntax keyword swiftFor for
 syntax keyword swiftRepeat repeat
 syntax keyword swiftWhile while
 
-highlight default link swiftFor swiftRepeat
-highlight default link swiftRepeat swiftRepeat
-highlight default link swiftWhile swiftRepeat
+highlight default link swiftFor swiftRepetition
+highlight default link swiftRepeat swiftRepetition
+highlight default link swiftWhile swiftRepetition
 
 "
 " Labels
@@ -313,7 +313,7 @@ highlight default link swiftLibraryProp Identifier
 highlight default link swiftLibraryType Type
 highlight default link swiftNumber Number
 highlight default link swiftPunctuation Operator
-highlight default link swiftRepeat Repeat
+highlight default link swiftRepetition Repeat
 highlight default link swiftStorageClass StorageClass
 highlight default link swiftString String
 highlight default link swiftTypeDef Typedef
