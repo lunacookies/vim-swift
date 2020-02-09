@@ -6,6 +6,10 @@ This is the repository for a new Swift plugin for Vim that aims to match Xcode i
 
 The colourscheme used in this screenshot is [vim-colors-xcode](https://github.com/arzg/vim-colors-xcode).
 
+## Options
+
+- `g:swiftHighlightIdents`: defaults to `0`, set to `1` to highlight user identifiers. This is off by default because Xcode doesn’t highlight as many identifiers as this does, and I personally find the extra colours overwhelming.
+
 ## Roadmap
 
 - [ ] Indentation
