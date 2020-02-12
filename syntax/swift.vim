@@ -315,10 +315,73 @@ highlight default link swiftFalse swiftBoolean
 highlight default link swiftTrue swiftBoolean
 
 "
+" Attributes
+"
+
+syntax match swiftAutoclosure '@autoclosure'
+syntax match swiftAvailable '@available'
+syntax match swiftConvention '@convention'
+syntax match swiftDiscardableResult '@discardableResult'
+syntax match swiftDynamicCallable '@dynamicCallable'
+syntax match swiftDynamicMemberLookup '@dynamicMemberLookup'
+syntax match swiftEscaping '@escaping'
+syntax match swiftFrozen '@frozen'
+syntax match swiftGKInspectable '@GKInspectable'
+syntax match swiftIBAction '@IBAction'
+syntax match swiftIBDesignable '@IBDesignable'
+syntax match swiftIBInspectable '@IBInspectable'
+syntax match swiftIBOutlet '@IBOutlet'
+syntax match swiftIBSegueAction '@IBSegueAction'
+syntax match swiftInlinable '@inlinable'
+syntax match swiftNSApplicationMain '@NSApplicationMain'
+syntax match swiftNSCopying '@NSCopying'
+syntax match swiftNSManaged '@NSManaged'
+syntax match swiftNonobjc '@nonobjc'
+syntax match swiftObjc '@objc'
+syntax match swiftObjcMembers '@objcMembers'
+syntax match swiftPropertyWrapper '@propertyWrapper'
+syntax match swiftRequiresStoredPropertyInits '@requires_stored_property_inits'
+syntax match swiftTestable '@testable'
+syntax match swiftUIApplicationMain '@UIApplicationMain'
+syntax match swiftUnknown '@unknown'
+syntax match swiftUsableFromInline '@usableFromInline'
+syntax match swiftWarnUnqualifiedAccess '@warn_unqualified_access'
+
+highlight default link swiftAutoclosure swiftAttribute
+highlight default link swiftAvailable swiftAttribute
+highlight default link swiftConvention swiftAttribute
+highlight default link swiftDiscardableResult swiftAttribute
+highlight default link swiftDynamicCallable swiftAttribute
+highlight default link swiftDynamicMemberLookup swiftAttribute
+highlight default link swiftEscaping swiftAttribute
+highlight default link swiftFrozen swiftAttribute
+highlight default link swiftGKInspectable swiftAttribute
+highlight default link swiftIBAction swiftAttribute
+highlight default link swiftIBDesignable swiftAttribute
+highlight default link swiftIBInspectable swiftAttribute
+highlight default link swiftIBOutlet swiftAttribute
+highlight default link swiftIBSegueAction swiftAttribute
+highlight default link swiftInlinable swiftAttribute
+highlight default link swiftNSApplicationMain swiftAttribute
+highlight default link swiftNSCopying swiftAttribute
+highlight default link swiftNSManaged swiftAttribute
+highlight default link swiftNonobjc swiftAttribute
+highlight default link swiftObjc swiftAttribute
+highlight default link swiftObjcMembers swiftAttribute
+highlight default link swiftPropertyWrapper swiftAttribute
+highlight default link swiftRequiresStoredPropertyInits swiftAttribute
+highlight default link swiftTestable swiftAttribute
+highlight default link swiftUIApplicationMain swiftAttribute
+highlight default link swiftUnknown swiftAttribute
+highlight default link swiftUsableFromInline swiftAttribute
+highlight default link swiftWarnUnqualifiedAccess swiftAttribute
+
+"
 " Default Linkages
 "
 
 highlight default link swiftAccessLevel swiftKeyword
+highlight default link swiftAttribute swiftKeyword
 highlight default link swiftBoolean Boolean
 highlight default link swiftComment Comment
 highlight default link swiftCommentNote Todo
