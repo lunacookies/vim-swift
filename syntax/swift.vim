@@ -377,6 +377,12 @@ highlight default link swiftUsableFromInline swiftAttribute
 highlight default link swiftWarnUnqualifiedAccess swiftAttribute
 
 "
+" Selectors
+"
+
+syntax match swiftSelector '#selector'
+
+"
 " Default Linkages
 "
 
@@ -402,6 +408,7 @@ highlight default link swiftNumber Number
 highlight default link swiftPlatformOrLanguage swiftKeyword
 highlight default link swiftPunctuation Operator
 highlight default link swiftRepetition Repeat
+highlight default link swiftSelector swiftKeyword
 highlight default link swiftStorageClass StorageClass
 highlight default link swiftString String
 highlight default link swiftTypeDef Typedef
