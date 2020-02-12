@@ -92,6 +92,30 @@ highlight default link swiftInOut swiftStorageClass
 highlight default link swiftStatic swiftStorageClass
 
 "
+" Platform/languages
+"
+
+syntax keyword swiftIOS iOS
+syntax keyword swiftIOSApplicationExtension iOSApplicationExtension
+syntax keyword swiftMacOS macOS
+syntax keyword swiftMacOSApplicationExtension macOSApplicationExtension
+syntax keyword swiftSwift swift
+syntax keyword swiftTvOS tvOS
+syntax keyword swiftTvOSApplicationExtension tvOSApplicationExtension
+syntax keyword swiftWatchOS watchOS
+syntax keyword swiftWatchOSApplicationExtension watchOSApplicationExtension
+
+highlight default link swiftIOS swiftPlatformOrLanguage
+highlight default link swiftIOSApplicationExtension swiftPlatformOrLanguage
+highlight default link swiftMacOS swiftPlatformOrLanguage
+highlight default link swiftMacOSApplicationExtension swiftPlatformOrLanguage
+highlight default link swiftSwift swiftPlatformOrLanguage
+highlight default link swiftTvOS swiftPlatformOrLanguage
+highlight default link swiftTvOSApplicationExtension swiftPlatformOrLanguage
+highlight default link swiftWatchOS swiftPlatformOrLanguage
+highlight default link swiftWatchOSApplicationExtension swiftPlatformOrLanguage
+
+"
 " Other keywords
 "
 
@@ -312,6 +336,7 @@ highlight default link swiftLibraryFunc Function
 highlight default link swiftLibraryProp Identifier
 highlight default link swiftLibraryType Type
 highlight default link swiftNumber Number
+highlight default link swiftPlatformOrLanguage swiftKeyword
 highlight default link swiftPunctuation Operator
 highlight default link swiftRepetition Repeat
 highlight default link swiftStorageClass StorageClass
