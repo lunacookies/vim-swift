@@ -274,7 +274,7 @@ syntax match swiftIdentDef '\v<[a-z][A-Za-z0-9]*' contained display
 " Function definitions
 "
 
-syntax match swiftFuncDef '\v<[a-z][A-Za-z0-9]*(\()@=' contained display
+syntax match swiftFuncDef '\v<[a-z][A-Za-z0-9]*' contained display
 
 "
 " Punctuation
