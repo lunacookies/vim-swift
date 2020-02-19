@@ -262,7 +262,7 @@ endfor
 syntax match swiftTypeDef '\v<[A-Z][A-Za-z0-9]*' contained display
 
 " Generics
-syntax match swiftTypeDef '\v(\<)@<=[A-Z][A-Za-z0-9]*(\>)@='
+syntax match swiftTypeDef '\v(\<(.{-},\s*|))@<=[A-Z][A-Za-z0-9]*((:\s*.{-}|,.{-}|)\>)@='
 
 "
 " Identifier definitions
