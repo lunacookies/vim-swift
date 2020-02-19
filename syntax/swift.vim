@@ -295,7 +295,9 @@ syntax match swiftDelimiter '[(){}\[\]]\+'
 syntax region swiftComment start='//' end='$'
 syntax region swiftDocComment start='///' end='$'
 
-syntax match swiftCommentNote '\v[A-Z]+(:)@=' containedin=swiftComment,swiftDocComment
+syntax match swiftCommentNote '\v[A-Z]+(:)@='
+            \ contained
+            \ containedin=swiftComment,swiftDocComment
 
 "
 " Numbers
