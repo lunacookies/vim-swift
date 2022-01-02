@@ -345,6 +345,7 @@ syntax match swiftPropertyWrapper '@propertyWrapper'
 syntax match swiftRequiresStoredPropertyInits '@requires_stored_property_inits'
 syntax match swiftTestable '@testable'
 syntax match swiftUIApplicationMain '@UIApplicationMain'
+syntax match swiftMain '@main'
 syntax match swiftUnknown '@unknown'
 syntax match swiftUsableFromInline '@usableFromInline'
 syntax match swiftWarnUnqualifiedAccess '@warn_unqualified_access'
@@ -374,6 +375,7 @@ highlight default link swiftPropertyWrapper swiftAttribute
 highlight default link swiftRequiresStoredPropertyInits swiftAttribute
 highlight default link swiftTestable swiftAttribute
 highlight default link swiftUIApplicationMain swiftAttribute
+highlight default link swiftMain swiftAttribute
 highlight default link swiftUnknown swiftAttribute
 highlight default link swiftUsableFromInline swiftAttribute
 highlight default link swiftWarnUnqualifiedAccess swiftAttribute
